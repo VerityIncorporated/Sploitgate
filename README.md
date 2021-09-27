@@ -19,4 +19,7 @@ Before 3.0 Update (Not Bad):
 
 3.0 (Yeah Idk):
 
-![GUI](https://user-images.githubusercontent.com/83372423/134997263-88d59c95-e562-4d3a-a7e2-442c58aebcdb.png)
+![image](https://user-images.githubusercontent.com/83372423/134997566-1fa2eb52-03a7-4e5b-ac4e-90aed4a5b17a.png)
+
+Q: What Needs to be done ?
+A: Everything.

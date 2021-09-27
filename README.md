@@ -10,13 +10,13 @@ and skid the code only a little bit you can make your own private build that sho
 
 
 Before 3.0 Update (Not Bad): 
-![GUI](![image](https://user-images.githubusercontent.com/83372423/134997153-52d547f8-0b0e-4fd0-96c7-ca19dc9c69bd.png)
+![GUI](https://user-images.githubusercontent.com/83372423/134997153-52d547f8-0b0e-4fd0-96c7-ca19dc9c69bd.png)
 
 
 2.9 or something Update (My favourite one):
 
-![GUI](![image](https://user-images.githubusercontent.com/83372423/134997263-88d59c95-e562-4d3a-a7e2-442c58aebcdb.png)
+![GUI](https://user-images.githubusercontent.com/83372423/134997418-1f01cd32-6418-4f67-86fd-5d6d1e8f1ab0.png)
 
 3.0 (Yeah Idk):
 
-![GUI](![image](https://user-images.githubusercontent.com/83372423/134997263-88d59c95-e562-4d3a-a7e2-442c58aebcdb.png)
+![GUI](https://user-images.githubusercontent.com/83372423/134997263-88d59c95-e562-4d3a-a7e2-442c58aebcdb.png)

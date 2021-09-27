@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "abc1c8da-2cf8-495b-b74d-997b2980bd62": {
+      "ProjectGuid": "abc1c8da-2cf8-495b-b74d-997b2980bd62",
+      "DisplayName": "Sploitgate",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

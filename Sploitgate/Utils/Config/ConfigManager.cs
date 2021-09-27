@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sploitgate.Utils
+namespace Main.Utils
 {
     class ConfigManager
     {
@@ -20,15 +20,15 @@ namespace Sploitgate.Utils
         {
             var Settings = new Config
             {
-                Triggerbot = SploitGate._TriggerbotEnabled,
-                ShottySnipers = SploitGate._ShottySnipers,
-                AntiRecoil = SploitGate._AntiRecoil,
-                Humanization = SploitGate._Humanized,
-                AntiRecoilStrength = SploitGate.AntiRecoilStength,
-                ShotDelay = SploitGate.ShotDelay,
-                Chromamode = SploitGate._ChromamodeEnabled,
-                Clicking = SploitGate.ClickingType,
-                Quickscope = SploitGate._QuickScope,
+                Triggerbot = Main._TriggerbotEnabled,
+                ShottySnipers = Main._ShottySnipers,
+                AntiRecoil = Main._AntiRecoil,
+                Humanization = Main._Humanized,
+                AntiRecoilStrength = Main.AntiRecoilStength,
+                ShotDelay = Main.ShotDelay,
+                Chromamode = Main._ChromamodeEnabled,
+                Clicking = Main.ClickingType,
+                Quickscope = Main._QuickScope,
             };
             File.WriteAllText(filePath, JsonConvert.SerializeObject(Settings, Formatting.Indented));
         }

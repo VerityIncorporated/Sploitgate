@@ -4,7 +4,7 @@ using System.IO;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 
-namespace Sploitgate.Utils
+namespace Main.Utils
 {
     public partial class Loading : MetroForm
     {
@@ -31,7 +31,7 @@ namespace Sploitgate.Utils
         {
             Hide();
             userSettings = ConfigManager.LoadResolution(Environment.CurrentDirectory + @"\Configs\Resolution.json");
-            Form MainForm = new SploitGate(userSettings.Top, userSettings.Left, userSettings.Bottom, userSettings.Right);
+            Form MainForm = new Main();
             MainForm.Show();
         }
 
@@ -41,7 +41,7 @@ namespace Sploitgate.Utils
             {
                 if (topTextBox.Text == string.Empty)
                 {
-                    MessageBox.Show("Please Fill in All Parameters", "Sploitgate", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Please Fill in All Parameters", "Main", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 else
@@ -51,7 +51,7 @@ namespace Sploitgate.Utils
 
                 if (leftTextBox.Text == string.Empty)
                 {
-                    MessageBox.Show("Please Fill in All Parameters", "Sploitgate", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Please Fill in All Parameters", "Main", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 else
@@ -61,7 +61,7 @@ namespace Sploitgate.Utils
 
                 if (bottomTextBox.Text == string.Empty)
                 {
-                    MessageBox.Show("Please Fill in All Parameters", "Sploitgate", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Please Fill in All Parameters", "Main", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 else
@@ -71,7 +71,7 @@ namespace Sploitgate.Utils
 
                 if (rightTextBox.Text == string.Empty)
                 {
-                    MessageBox.Show("Please Fill in All Parameters", "Sploitgate", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Please Fill in All Parameters", "Main", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 else
@@ -80,12 +80,12 @@ namespace Sploitgate.Utils
                 }
                 Hide();
                 ConfigManager.SaveResolution(Environment.CurrentDirectory + @"\Configs\Resolution.json");
-                Form MainForm = new SploitGate(top, left, bottom, right);
+                Form MainForm = new Main();
                 MainForm.Show();
             }
             catch(FormatException)
             {
-                MessageBox.Show("Please Fill in All Parameters with Numbers Only", "Sploitgate", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please Fill in All Parameters with Numbers Only", "Main", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

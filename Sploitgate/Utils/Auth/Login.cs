@@ -11,11 +11,10 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using KeyAuth;
 using MetroFramework;
 using MetroFramework.Forms;
 
-namespace Sploitgate.Utils
+namespace Main.Utils
 {
     public partial class Login : MetroForm
     {
@@ -29,17 +28,10 @@ namespace Sploitgate.Utils
         public static string configPassword;
         public static string configSubscription;
 
-        static string name = "Sploitgate";
-        static string ownerid = "TQ4uoezGrZ";
-        static string secret = "8341fbc982b29898cbeb384fc9848b7e36d7551c9075563bc03ce0f03be7f1c5";
-        static string version = "1.0";
         static bool Register = false;
-
-        public static api Auth = new api(name, ownerid, secret, version);
 
         private void Login_Load(object sender, EventArgs e)
         {
-            SetDNS("1.1.1.1");
             if (!File.Exists(Environment.CurrentDirectory + @"\Configs\"))
             {
                 Directory.CreateDirectory(Environment.CurrentDirectory + @"\Configs\");
@@ -60,20 +52,18 @@ namespace Sploitgate.Utils
         {
             Hide();
             configUser = ConfigManager.LoadAccount(Environment.CurrentDirectory + @"\Configs\Account\AccountInformation.json");
-            configUsername = Encryption.Decrypt(configUser.Username, WindowsIdentity.GetCurrent().User.Value);
-            configPassword = Encryption.Decrypt(configUser.Password, WindowsIdentity.GetCurrent().User.Value);
-            Auth.init();
-            if (Auth.login(configUsername, configPassword))
-            {
-                Auth.log("Logged in");
-                Loading main = new Loading();
-                main.Show();
-            }
+            //configUsername = Encryption.Decrypt(configUser.Username, WindowsIdentity.GetCurrent().User.Value);
+            //configPassword = Encryption.Decrypt(configUser.Password, WindowsIdentity.GetCurrent().User.Value);
+            //if (Auth.login(configUsername, configPassword))
+            //{
+            //    Auth.log("Logged in");
+            //    Main main = new Main();
+            //    main.Show();
+            //}
         }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            UnsetDNS();
             Environment.Exit(0);
         }
 
@@ -82,14 +72,14 @@ namespace Sploitgate.Utils
             if(registerToggleSwitch.Checked)
             {
                 Register = true;
-                continueButton.Location = new Point(117, 219);
+                continueButton.Location = new Point(137, 264);
                 inviteTextBox.Visible = true;
                 continueButton.Text = "Register";
             }
             else
             {
                 Register = false;
-                continueButton.Location = new Point(118, 186);
+                continueButton.Location = new Point(137, 232);
                 inviteTextBox.Visible = false;
                 continueButton.Text = "Login";
             }
@@ -99,27 +89,25 @@ namespace Sploitgate.Utils
         {
             if(!Register)
             {
-                Auth.init();
-                if (Auth.login(usernameTextBox.Text, passwordTextBox.Text))
+                /*if (Auth.login(usernameTextBox.Text, passwordTextBox.Text))
                 {
                     Hide();
                     CreateAutoLogin();
                     Auth.log("Logged in");
-                    Loading main = new Loading();
+                    Main main = new Main();
                     main.Show();
-                }
+                }*/
             }
             else
             {
-                Auth.init();
-                if (Auth.register(usernameTextBox.Text, passwordTextBox.Text, inviteTextBox.Text))
+                /*if (Auth.register(usernameTextBox.Text, passwordTextBox.Text, inviteTextBox.Text))
                 {
                     Hide();
                     CreateAutoLogin();
                     Auth.log("Registered");
-                    Form Load = new Loading();
-                    Load.Show();
-                }
+                    Main main = new Main();
+                    main.Show();
+                }*/
             }
         }
 
@@ -127,8 +115,8 @@ namespace Sploitgate.Utils
         {
             if(!File.Exists(Environment.CurrentDirectory + @"\Configs\Account\AccountInformation.json"))
             {
-                configUsername = Encryption.Encrypt(usernameTextBox.Text, WindowsIdentity.GetCurrent().User.Value);
-                configPassword = Encryption.Encrypt(passwordTextBox.Text, WindowsIdentity.GetCurrent().User.Value);
+                /*configUsername = Encryption.Encrypt(usernameTextBox.Text, WindowsIdentity.GetCurrent().User.Value);
+                configPassword = Encryption.Encrypt(passwordTextBox.Text, WindowsIdentity.GetCurrent().User.Value);*/
                 ConfigManager.SaveAccount(Environment.CurrentDirectory + @"\Configs\Account\AccountInformation.json");
             }
         }
@@ -143,6 +131,8 @@ namespace Sploitgate.Utils
             return Nic;
         }
 
+
+        //KeyAuthShit
         public static void SetDNS(string DnsString)
         {
             string[] Dns = { DnsString };
@@ -191,5 +181,6 @@ namespace Sploitgate.Utils
                 }
             }
         }
+        //KeyAuthShit
     }
 }

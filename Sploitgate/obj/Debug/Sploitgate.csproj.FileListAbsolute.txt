@@ -1,18 +1,35 @@
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Debug\Sploitgate.exe.config
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Debug\Sploitgate.exe
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Debug\Sploitgate.pdb
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.csproj.AssemblyReference.cache
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.Properties.Resources.resources
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.csproj.GenerateResource.cache
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.csproj.CoreCompileInputs.cache
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.csproj.CopyComplete
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.exe
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.pdb
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.SploitGate.resources
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.csproj.Fody.CopyLocal.cache
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Interop.AutoItX3Lib.dll
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.csproj.ResolveComReference.cache
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.Utils.Loading.resources
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.Utils.Login.resources
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Debug\WindowsInput.xml
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Main.Main.resources
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Main.Utils.Loading.resources
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Main.Utils.Login.resources
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Debug\Sploitgate.exe.config
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Debug\Sploitgate.exe
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Debug\Sploitgate.pdb
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.exe
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.pdb
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.csproj.AssemblyReference.cache
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.csproj.SuggestedBindingRedirects.cache
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Debug\Main.Main.resources
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.Properties.Resources.resources
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Debug\Main.Utils.Loading.resources
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Debug\Main.Utils.Login.resources
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.csproj.GenerateResource.cache
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.csproj.CoreCompileInputs.cache
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.exe
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.pdb
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\bin\Debug\Sploitgate.exe.config
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\bin\Debug\Sploitgate.exe
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\bin\Debug\Sploitgate.pdb
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\bin\Debug\WindowsInput.xml
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.csproj.Fody.CopyLocal.cache
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Debug\Sploitgate.csproj.CopyComplete

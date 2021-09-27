@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Sploitgate.Utils
+namespace Main.Utils
 {
-    class Scamble
+    class Scramble
     {
         private static Random random = new Random();
         public static string RandomString(int length)
@@ -25,10 +26,15 @@ namespace Sploitgate.Utils
         {
             if (MainWindowName != true)
             {
-                var thisis = Process.GetCurrentProcess();
-                File.Move(thisis.ProcessName + ".exe", RandomString(50) + ".exe");
+                var thisis = System.Reflection.Assembly.GetExecutingAssembly().Location;
+                File.Move(thisis, RandomString(5) + ".exe");
                 MainWindowName = true;
             }
+        }
+
+        public static void ChangeGUID()
+        {
+            //CodeRemovedBecauseFuckYou
         }
     }
 }

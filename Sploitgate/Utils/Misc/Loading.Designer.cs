@@ -1,5 +1,5 @@
 ﻿
-namespace Sploitgate.Utils
+namespace Main.Utils
 {
     partial class Loading
     {
@@ -29,12 +29,15 @@ namespace Sploitgate.Utils
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loading));
             this.topTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.leftTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.bottomTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.rightTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.proceedButton = new Guna.UI2.WinForms.Guna2Button();
             this.helpButton = new Guna.UI2.WinForms.Guna2Button();
+            this.logoPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // topTextBox
@@ -56,7 +59,7 @@ namespace Sploitgate.Utils
             this.topTextBox.ForeColor = System.Drawing.Color.White;
             this.topTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.topTextBox.HoverState.Parent = this.topTextBox;
-            this.topTextBox.Location = new System.Drawing.Point(26, 84);
+            this.topTextBox.Location = new System.Drawing.Point(25, 135);
             this.topTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.topTextBox.Name = "topTextBox";
             this.topTextBox.PasswordChar = '\0';
@@ -86,7 +89,7 @@ namespace Sploitgate.Utils
             this.leftTextBox.ForeColor = System.Drawing.Color.White;
             this.leftTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.leftTextBox.HoverState.Parent = this.leftTextBox;
-            this.leftTextBox.Location = new System.Drawing.Point(214, 84);
+            this.leftTextBox.Location = new System.Drawing.Point(213, 135);
             this.leftTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.leftTextBox.Name = "leftTextBox";
             this.leftTextBox.PasswordChar = '\0';
@@ -116,7 +119,7 @@ namespace Sploitgate.Utils
             this.bottomTextBox.ForeColor = System.Drawing.Color.White;
             this.bottomTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.bottomTextBox.HoverState.Parent = this.bottomTextBox;
-            this.bottomTextBox.Location = new System.Drawing.Point(26, 131);
+            this.bottomTextBox.Location = new System.Drawing.Point(25, 182);
             this.bottomTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.bottomTextBox.Name = "bottomTextBox";
             this.bottomTextBox.PasswordChar = '\0';
@@ -146,7 +149,7 @@ namespace Sploitgate.Utils
             this.rightTextBox.ForeColor = System.Drawing.Color.White;
             this.rightTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rightTextBox.HoverState.Parent = this.rightTextBox;
-            this.rightTextBox.Location = new System.Drawing.Point(214, 131);
+            this.rightTextBox.Location = new System.Drawing.Point(213, 182);
             this.rightTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.rightTextBox.Name = "rightTextBox";
             this.rightTextBox.PasswordChar = '\0';
@@ -167,11 +170,11 @@ namespace Sploitgate.Utils
             this.proceedButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.proceedButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.proceedButton.DisabledState.Parent = this.proceedButton;
-            this.proceedButton.FillColor = System.Drawing.Color.SlateBlue;
+            this.proceedButton.FillColor = System.Drawing.Color.Green;
             this.proceedButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.proceedButton.ForeColor = System.Drawing.Color.White;
             this.proceedButton.HoverState.Parent = this.proceedButton;
-            this.proceedButton.Location = new System.Drawing.Point(26, 192);
+            this.proceedButton.Location = new System.Drawing.Point(25, 243);
             this.proceedButton.Name = "proceedButton";
             this.proceedButton.ShadowDecoration.Parent = this.proceedButton;
             this.proceedButton.Size = new System.Drawing.Size(179, 37);
@@ -189,11 +192,11 @@ namespace Sploitgate.Utils
             this.helpButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.helpButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.helpButton.DisabledState.Parent = this.helpButton;
-            this.helpButton.FillColor = System.Drawing.Color.SlateBlue;
+            this.helpButton.FillColor = System.Drawing.Color.Red;
             this.helpButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpButton.ForeColor = System.Drawing.Color.White;
             this.helpButton.HoverState.Parent = this.helpButton;
-            this.helpButton.Location = new System.Drawing.Point(214, 192);
+            this.helpButton.Location = new System.Drawing.Point(213, 243);
             this.helpButton.Name = "helpButton";
             this.helpButton.ShadowDecoration.Parent = this.helpButton;
             this.helpButton.Size = new System.Drawing.Size(179, 37);
@@ -201,11 +204,22 @@ namespace Sploitgate.Utils
             this.helpButton.Text = "Help";
             this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
             // 
+            // logoPictureBox
+            // 
+            this.logoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.Image")));
+            this.logoPictureBox.Location = new System.Drawing.Point(39, 32);
+            this.logoPictureBox.Name = "logoPictureBox";
+            this.logoPictureBox.Size = new System.Drawing.Size(341, 80);
+            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logoPictureBox.TabIndex = 8;
+            this.logoPictureBox.TabStop = false;
+            // 
             // Loading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 268);
+            this.ClientSize = new System.Drawing.Size(418, 314);
+            this.Controls.Add(this.logoPictureBox);
             this.Controls.Add(this.helpButton);
             this.Controls.Add(this.proceedButton);
             this.Controls.Add(this.rightTextBox);
@@ -218,11 +232,11 @@ namespace Sploitgate.Utils
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.ShowIcon = false;
             this.Style = MetroFramework.MetroColorStyle.Red;
-            this.Text = "Verity <3\'s You";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Loading_FormClosing);
             this.Load += new System.EventHandler(this.Loading_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -234,5 +248,6 @@ namespace Sploitgate.Utils
         private Guna.UI2.WinForms.Guna2TextBox rightTextBox;
         private Guna.UI2.WinForms.Guna2Button proceedButton;
         private Guna.UI2.WinForms.Guna2Button helpButton;
+        private System.Windows.Forms.PictureBox logoPictureBox;
     }
 }

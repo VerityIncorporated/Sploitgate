@@ -1,7 +1,7 @@
 ﻿
-namespace Sploitgate
+namespace Main
 {
-    partial class SploitGate
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -30,11 +30,13 @@ namespace Sploitgate
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SploitGate));
+            Guna.UI2.AnimatorNS.Animation animation15 = new Guna.UI2.AnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.triggerbotGroupBox = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.crouchassistLabel = new System.Windows.Forms.Label();
+            this.crouchassistToggleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.triggerLabel = new System.Windows.Forms.Label();
             this.triggerbotToggleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.configsaveButton = new Guna.UI2.WinForms.Guna2Button();
@@ -44,16 +46,16 @@ namespace Sploitgate
             this.loadconfigsComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.chromamodeLabel = new System.Windows.Forms.Label();
             this.chromamodeToggleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.lightmodeLabel = new System.Windows.Forms.Label();
-            this.lightmodeToggleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.triggerbotoptionsGroupBox = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.quickscopeLabel = new System.Windows.Forms.Label();
-            this.quickscopeToggleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.holdmouseLabel = new System.Windows.Forms.Label();
+            this.holdmouseTrackBar = new Guna.UI2.WinForms.Guna2TrackBar();
             this.humanizationLabel = new System.Windows.Forms.Label();
             this.humanizeToggleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.quickscopeLabel = new System.Windows.Forms.Label();
+            this.quickscopeToggleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.antirecoilstrengthLabel = new System.Windows.Forms.Label();
             this.antirecoilstrengthTrackBar = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.label1 = new System.Windows.Forms.Label();
+            this.antirecoilLabel = new System.Windows.Forms.Label();
             this.antirecoilToggleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.delayLabel = new System.Windows.Forms.Label();
             this.shotdelayTrackBar = new Guna.UI2.WinForms.Guna2TrackBar();
@@ -62,12 +64,16 @@ namespace Sploitgate
             this.ChromamodeTimer = new System.Windows.Forms.Timer(this.components);
             this.Transition = new Guna.UI2.WinForms.Guna2Transition();
             this.subLabel = new System.Windows.Forms.Label();
-            this.humanizationTimer = new System.Windows.Forms.Timer(this.components);
             this.motdLabel = new System.Windows.Forms.Label();
+            this.logoPictureBox = new System.Windows.Forms.PictureBox();
+            this.humanizationTimer = new System.Windows.Forms.Timer(this.components);
+            this.logoDragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.triggerbotGroupBox.SuspendLayout();
             this.miscGroupBox.SuspendLayout();
             this.triggerbotoptionsGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // StyleManager
@@ -82,11 +88,11 @@ namespace Sploitgate
             this.Transition.SetDecoration(this.welcomeLabel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.welcomeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeLabel.ForeColor = System.Drawing.Color.White;
-            this.welcomeLabel.Location = new System.Drawing.Point(4, 372);
+            this.welcomeLabel.Location = new System.Drawing.Point(3, 401);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(169, 21);
+            this.welcomeLabel.Size = new System.Drawing.Size(95, 21);
             this.welcomeLabel.TabIndex = 1;
-            this.welcomeLabel.Text = "Welcome to Sploitgate.";
+            this.welcomeLabel.Text = "Welcome to.";
             this.welcomeLabel.Visible = false;
             // 
             // triggerbotGroupBox
@@ -94,22 +100,61 @@ namespace Sploitgate
             this.triggerbotGroupBox.BackColor = System.Drawing.Color.Transparent;
             this.triggerbotGroupBox.BorderRadius = 8;
             this.triggerbotGroupBox.BorderThickness = 0;
+            this.triggerbotGroupBox.Controls.Add(this.crouchassistLabel);
+            this.triggerbotGroupBox.Controls.Add(this.crouchassistToggleSwitch);
             this.triggerbotGroupBox.Controls.Add(this.triggerLabel);
             this.triggerbotGroupBox.Controls.Add(this.triggerbotToggleSwitch);
-            this.triggerbotGroupBox.CustomBorderColor = System.Drawing.Color.BlueViolet;
+            this.triggerbotGroupBox.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(180)))), ((int)(((byte)(26)))));
             this.triggerbotGroupBox.CustomBorderThickness = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.Transition.SetDecoration(this.triggerbotGroupBox, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.triggerbotGroupBox.FillColor = System.Drawing.Color.Indigo;
+            this.triggerbotGroupBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.triggerbotGroupBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerbotGroupBox.ForeColor = System.Drawing.Color.White;
-            this.triggerbotGroupBox.Location = new System.Drawing.Point(135, 68);
+            this.triggerbotGroupBox.Location = new System.Drawing.Point(21, 80);
             this.triggerbotGroupBox.Name = "triggerbotGroupBox";
             this.triggerbotGroupBox.ShadowDecoration.Parent = this.triggerbotGroupBox;
-            this.triggerbotGroupBox.Size = new System.Drawing.Size(192, 280);
+            this.triggerbotGroupBox.Size = new System.Drawing.Size(197, 112);
             this.triggerbotGroupBox.TabIndex = 2;
-            this.triggerbotGroupBox.Text = "Triggerbot";
+            this.triggerbotGroupBox.Text = "Modules";
             this.triggerbotGroupBox.TextOffset = new System.Drawing.Point(0, -5);
             this.triggerbotGroupBox.Visible = false;
+            // 
+            // crouchassistLabel
+            // 
+            this.crouchassistLabel.AutoSize = true;
+            this.crouchassistLabel.BackColor = System.Drawing.Color.Transparent;
+            this.Transition.SetDecoration(this.crouchassistLabel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.crouchassistLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.crouchassistLabel.ForeColor = System.Drawing.Color.White;
+            this.crouchassistLabel.Location = new System.Drawing.Point(3, 73);
+            this.crouchassistLabel.Name = "crouchassistLabel";
+            this.crouchassistLabel.Size = new System.Drawing.Size(127, 20);
+            this.crouchassistLabel.TabIndex = 12;
+            this.crouchassistLabel.Text = "Crouch Aim Assist";
+            this.crouchassistLabel.Visible = false;
+            // 
+            // crouchassistToggleSwitch
+            // 
+            this.crouchassistToggleSwitch.Animated = true;
+            this.crouchassistToggleSwitch.BackColor = System.Drawing.Color.Transparent;
+            this.crouchassistToggleSwitch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.crouchassistToggleSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.crouchassistToggleSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.crouchassistToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.crouchassistToggleSwitch.CheckedState.Parent = this.crouchassistToggleSwitch;
+            this.Transition.SetDecoration(this.crouchassistToggleSwitch, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.crouchassistToggleSwitch.Location = new System.Drawing.Point(150, 73);
+            this.crouchassistToggleSwitch.Name = "crouchassistToggleSwitch";
+            this.crouchassistToggleSwitch.ShadowDecoration.Parent = this.crouchassistToggleSwitch;
+            this.crouchassistToggleSwitch.Size = new System.Drawing.Size(35, 20);
+            this.crouchassistToggleSwitch.TabIndex = 11;
+            this.crouchassistToggleSwitch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.crouchassistToggleSwitch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.crouchassistToggleSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.crouchassistToggleSwitch.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.crouchassistToggleSwitch.UncheckedState.Parent = this.crouchassistToggleSwitch;
+            this.crouchassistToggleSwitch.Visible = false;
+            this.crouchassistToggleSwitch.CheckedChanged += new System.EventHandler(this.crouchassistToggleSwitch_CheckedChanged);
             // 
             // triggerLabel
             // 
@@ -134,7 +179,7 @@ namespace Sploitgate
             this.triggerbotToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.White;
             this.triggerbotToggleSwitch.CheckedState.Parent = this.triggerbotToggleSwitch;
             this.Transition.SetDecoration(this.triggerbotToggleSwitch, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.triggerbotToggleSwitch.Location = new System.Drawing.Point(150, 36);
+            this.triggerbotToggleSwitch.Location = new System.Drawing.Point(150, 39);
             this.triggerbotToggleSwitch.Name = "triggerbotToggleSwitch";
             this.triggerbotToggleSwitch.ShadowDecoration.Parent = this.triggerbotToggleSwitch;
             this.triggerbotToggleSwitch.Size = new System.Drawing.Size(35, 20);
@@ -158,16 +203,17 @@ namespace Sploitgate
             this.configsaveButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.configsaveButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.configsaveButton.DisabledState.Parent = this.configsaveButton;
-            this.configsaveButton.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.configsaveButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(180)))), ((int)(((byte)(26)))));
             this.configsaveButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.configsaveButton.ForeColor = System.Drawing.Color.White;
             this.configsaveButton.HoverState.Parent = this.configsaveButton;
-            this.configsaveButton.Location = new System.Drawing.Point(9, 179);
+            this.configsaveButton.Location = new System.Drawing.Point(383, 394);
             this.configsaveButton.Name = "configsaveButton";
             this.configsaveButton.ShadowDecoration.Parent = this.configsaveButton;
             this.configsaveButton.Size = new System.Drawing.Size(175, 36);
             this.configsaveButton.TabIndex = 11;
             this.configsaveButton.Text = "Save Config";
+            this.configsaveButton.Visible = false;
             this.configsaveButton.Click += new System.EventHandler(this.configsaveButton_Click);
             // 
             // miscGroupBox
@@ -177,22 +223,18 @@ namespace Sploitgate
             this.miscGroupBox.BorderThickness = 0;
             this.miscGroupBox.Controls.Add(this.rightclickLabel);
             this.miscGroupBox.Controls.Add(this.rightclickToggleSwitch);
-            this.miscGroupBox.Controls.Add(this.loadconfigsComboBox);
-            this.miscGroupBox.Controls.Add(this.configsaveButton);
             this.miscGroupBox.Controls.Add(this.chromamodeLabel);
             this.miscGroupBox.Controls.Add(this.chromamodeToggleSwitch);
-            this.miscGroupBox.Controls.Add(this.lightmodeLabel);
-            this.miscGroupBox.Controls.Add(this.lightmodeToggleSwitch);
-            this.miscGroupBox.CustomBorderColor = System.Drawing.Color.BlueViolet;
+            this.miscGroupBox.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(180)))), ((int)(((byte)(26)))));
             this.miscGroupBox.CustomBorderThickness = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.Transition.SetDecoration(this.miscGroupBox, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.miscGroupBox.FillColor = System.Drawing.Color.Indigo;
+            this.miscGroupBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.miscGroupBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.miscGroupBox.ForeColor = System.Drawing.Color.White;
-            this.miscGroupBox.Location = new System.Drawing.Point(541, 68);
+            this.miscGroupBox.Location = new System.Drawing.Point(224, 80);
             this.miscGroupBox.Name = "miscGroupBox";
             this.miscGroupBox.ShadowDecoration.Parent = this.miscGroupBox;
-            this.miscGroupBox.Size = new System.Drawing.Size(192, 280);
+            this.miscGroupBox.Size = new System.Drawing.Size(197, 112);
             this.miscGroupBox.TabIndex = 3;
             this.miscGroupBox.Text = "Miscellaneous";
             this.miscGroupBox.TextOffset = new System.Drawing.Point(0, -5);
@@ -205,11 +247,12 @@ namespace Sploitgate
             this.Transition.SetDecoration(this.rightclickLabel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.rightclickLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.rightclickLabel.ForeColor = System.Drawing.Color.White;
-            this.rightclickLabel.Location = new System.Drawing.Point(7, 119);
+            this.rightclickLabel.Location = new System.Drawing.Point(7, 73);
             this.rightclickLabel.Name = "rightclickLabel";
             this.rightclickLabel.Size = new System.Drawing.Size(79, 20);
             this.rightclickLabel.TabIndex = 14;
             this.rightclickLabel.Text = "Right Click";
+            this.rightclickLabel.Visible = false;
             // 
             // rightclickToggleSwitch
             // 
@@ -221,7 +264,7 @@ namespace Sploitgate
             this.rightclickToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rightclickToggleSwitch.CheckedState.Parent = this.rightclickToggleSwitch;
             this.Transition.SetDecoration(this.rightclickToggleSwitch, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.rightclickToggleSwitch.Location = new System.Drawing.Point(150, 119);
+            this.rightclickToggleSwitch.Location = new System.Drawing.Point(150, 73);
             this.rightclickToggleSwitch.Name = "rightclickToggleSwitch";
             this.rightclickToggleSwitch.ShadowDecoration.Parent = this.rightclickToggleSwitch;
             this.rightclickToggleSwitch.Size = new System.Drawing.Size(35, 20);
@@ -231,6 +274,7 @@ namespace Sploitgate
             this.rightclickToggleSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.rightclickToggleSwitch.UncheckedState.InnerColor = System.Drawing.Color.White;
             this.rightclickToggleSwitch.UncheckedState.Parent = this.rightclickToggleSwitch;
+            this.rightclickToggleSwitch.Visible = false;
             this.rightclickToggleSwitch.CheckedChanged += new System.EventHandler(this.rightclickToggleSwitch_CheckedChanged);
             // 
             // loadconfigsComboBox
@@ -241,7 +285,7 @@ namespace Sploitgate
             this.Transition.SetDecoration(this.loadconfigsComboBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.loadconfigsComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.loadconfigsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.loadconfigsComboBox.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.loadconfigsComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(180)))), ((int)(((byte)(26)))));
             this.loadconfigsComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.loadconfigsComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.loadconfigsComboBox.FocusedState.Parent = this.loadconfigsComboBox;
@@ -252,12 +296,13 @@ namespace Sploitgate
             this.loadconfigsComboBox.Items.AddRange(new object[] {
             "Load Configs"});
             this.loadconfigsComboBox.ItemsAppearance.Parent = this.loadconfigsComboBox;
-            this.loadconfigsComboBox.Location = new System.Drawing.Point(9, 220);
+            this.loadconfigsComboBox.Location = new System.Drawing.Point(383, 435);
             this.loadconfigsComboBox.Name = "loadconfigsComboBox";
             this.loadconfigsComboBox.ShadowDecoration.Parent = this.loadconfigsComboBox;
             this.loadconfigsComboBox.Size = new System.Drawing.Size(175, 36);
             this.loadconfigsComboBox.StartIndex = 0;
             this.loadconfigsComboBox.TabIndex = 12;
+            this.loadconfigsComboBox.Visible = false;
             this.loadconfigsComboBox.SelectedIndexChanged += new System.EventHandler(this.loadconfigsComboBox_SelectedIndexChanged);
             this.loadconfigsComboBox.Click += new System.EventHandler(this.loadconfigsComboBox_Click);
             // 
@@ -296,107 +341,64 @@ namespace Sploitgate
             this.chromamodeToggleSwitch.UncheckedState.Parent = this.chromamodeToggleSwitch;
             this.chromamodeToggleSwitch.CheckedChanged += new System.EventHandler(this.chromamodeToggleSwitch_CheckedChanged);
             // 
-            // lightmodeLabel
-            // 
-            this.lightmodeLabel.AutoSize = true;
-            this.lightmodeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.Transition.SetDecoration(this.lightmodeLabel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lightmodeLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.lightmodeLabel.ForeColor = System.Drawing.Color.White;
-            this.lightmodeLabel.Location = new System.Drawing.Point(7, 78);
-            this.lightmodeLabel.Name = "lightmodeLabel";
-            this.lightmodeLabel.Size = new System.Drawing.Size(85, 20);
-            this.lightmodeLabel.TabIndex = 5;
-            this.lightmodeLabel.Text = "Light Mode";
-            // 
-            // lightmodeToggleSwitch
-            // 
-            this.lightmodeToggleSwitch.Animated = true;
-            this.lightmodeToggleSwitch.BackColor = System.Drawing.Color.Transparent;
-            this.lightmodeToggleSwitch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lightmodeToggleSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lightmodeToggleSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.lightmodeToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.lightmodeToggleSwitch.CheckedState.Parent = this.lightmodeToggleSwitch;
-            this.Transition.SetDecoration(this.lightmodeToggleSwitch, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lightmodeToggleSwitch.Location = new System.Drawing.Point(150, 78);
-            this.lightmodeToggleSwitch.Name = "lightmodeToggleSwitch";
-            this.lightmodeToggleSwitch.ShadowDecoration.Parent = this.lightmodeToggleSwitch;
-            this.lightmodeToggleSwitch.Size = new System.Drawing.Size(35, 20);
-            this.lightmodeToggleSwitch.TabIndex = 0;
-            this.lightmodeToggleSwitch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lightmodeToggleSwitch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lightmodeToggleSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.lightmodeToggleSwitch.UncheckedState.InnerColor = System.Drawing.Color.White;
-            this.lightmodeToggleSwitch.UncheckedState.Parent = this.lightmodeToggleSwitch;
-            this.lightmodeToggleSwitch.CheckedChanged += new System.EventHandler(this.lightmodeToggleSwitch_CheckedChanged);
-            // 
             // triggerbotoptionsGroupBox
             // 
             this.triggerbotoptionsGroupBox.BackColor = System.Drawing.Color.Transparent;
             this.triggerbotoptionsGroupBox.BorderRadius = 8;
             this.triggerbotoptionsGroupBox.BorderThickness = 0;
+            this.triggerbotoptionsGroupBox.Controls.Add(this.holdmouseLabel);
+            this.triggerbotoptionsGroupBox.Controls.Add(this.holdmouseTrackBar);
+            this.triggerbotoptionsGroupBox.Controls.Add(this.humanizationLabel);
+            this.triggerbotoptionsGroupBox.Controls.Add(this.antirecoilstrengthLabel);
+            this.triggerbotoptionsGroupBox.Controls.Add(this.humanizeToggleSwitch);
+            this.triggerbotoptionsGroupBox.Controls.Add(this.antirecoilstrengthTrackBar);
             this.triggerbotoptionsGroupBox.Controls.Add(this.quickscopeLabel);
             this.triggerbotoptionsGroupBox.Controls.Add(this.quickscopeToggleSwitch);
-            this.triggerbotoptionsGroupBox.Controls.Add(this.humanizationLabel);
-            this.triggerbotoptionsGroupBox.Controls.Add(this.humanizeToggleSwitch);
-            this.triggerbotoptionsGroupBox.Controls.Add(this.antirecoilstrengthLabel);
-            this.triggerbotoptionsGroupBox.Controls.Add(this.antirecoilstrengthTrackBar);
-            this.triggerbotoptionsGroupBox.Controls.Add(this.label1);
+            this.triggerbotoptionsGroupBox.Controls.Add(this.antirecoilLabel);
             this.triggerbotoptionsGroupBox.Controls.Add(this.antirecoilToggleSwitch);
             this.triggerbotoptionsGroupBox.Controls.Add(this.delayLabel);
             this.triggerbotoptionsGroupBox.Controls.Add(this.shotdelayTrackBar);
             this.triggerbotoptionsGroupBox.Controls.Add(this.shottysnipersLabel);
             this.triggerbotoptionsGroupBox.Controls.Add(this.shottysnipersToggleSwitch);
-            this.triggerbotoptionsGroupBox.CustomBorderColor = System.Drawing.Color.BlueViolet;
+            this.triggerbotoptionsGroupBox.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(180)))), ((int)(((byte)(26)))));
             this.triggerbotoptionsGroupBox.CustomBorderThickness = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.Transition.SetDecoration(this.triggerbotoptionsGroupBox, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.triggerbotoptionsGroupBox.FillColor = System.Drawing.Color.Indigo;
+            this.triggerbotoptionsGroupBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.triggerbotoptionsGroupBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triggerbotoptionsGroupBox.ForeColor = System.Drawing.Color.White;
-            this.triggerbotoptionsGroupBox.Location = new System.Drawing.Point(338, 68);
+            this.triggerbotoptionsGroupBox.Location = new System.Drawing.Point(21, 198);
             this.triggerbotoptionsGroupBox.Name = "triggerbotoptionsGroupBox";
             this.triggerbotoptionsGroupBox.ShadowDecoration.Parent = this.triggerbotoptionsGroupBox;
-            this.triggerbotoptionsGroupBox.Size = new System.Drawing.Size(192, 280);
+            this.triggerbotoptionsGroupBox.Size = new System.Drawing.Size(400, 191);
             this.triggerbotoptionsGroupBox.TabIndex = 4;
             this.triggerbotoptionsGroupBox.Text = "Triggerbot Options";
             this.triggerbotoptionsGroupBox.TextOffset = new System.Drawing.Point(0, -5);
             this.triggerbotoptionsGroupBox.Visible = false;
             // 
-            // quickscopeLabel
+            // holdmouseLabel
             // 
-            this.quickscopeLabel.AutoSize = true;
-            this.quickscopeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.Transition.SetDecoration(this.quickscopeLabel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.quickscopeLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.quickscopeLabel.ForeColor = System.Drawing.Color.White;
-            this.quickscopeLabel.Location = new System.Drawing.Point(7, 73);
-            this.quickscopeLabel.Name = "quickscopeLabel";
-            this.quickscopeLabel.Size = new System.Drawing.Size(85, 20);
-            this.quickscopeLabel.TabIndex = 18;
-            this.quickscopeLabel.Text = "Quickscope";
+            this.holdmouseLabel.BackColor = System.Drawing.Color.Transparent;
+            this.Transition.SetDecoration(this.holdmouseLabel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.holdmouseLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.holdmouseLabel.ForeColor = System.Drawing.Color.White;
+            this.holdmouseLabel.Location = new System.Drawing.Point(204, 41);
+            this.holdmouseLabel.Name = "holdmouseLabel";
+            this.holdmouseLabel.Size = new System.Drawing.Size(193, 21);
+            this.holdmouseLabel.TabIndex = 20;
+            this.holdmouseLabel.Text = "Hold Mouse Delay: 0ms";
             // 
-            // quickscopeToggleSwitch
+            // holdmouseTrackBar
             // 
-            this.quickscopeToggleSwitch.Animated = true;
-            this.quickscopeToggleSwitch.BackColor = System.Drawing.Color.Transparent;
-            this.quickscopeToggleSwitch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.quickscopeToggleSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.quickscopeToggleSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.quickscopeToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.quickscopeToggleSwitch.CheckedState.Parent = this.quickscopeToggleSwitch;
-            this.Transition.SetDecoration(this.quickscopeToggleSwitch, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.quickscopeToggleSwitch.Location = new System.Drawing.Point(149, 73);
-            this.quickscopeToggleSwitch.Name = "quickscopeToggleSwitch";
-            this.quickscopeToggleSwitch.ShadowDecoration.Parent = this.quickscopeToggleSwitch;
-            this.quickscopeToggleSwitch.Size = new System.Drawing.Size(35, 20);
-            this.quickscopeToggleSwitch.TabIndex = 17;
-            this.quickscopeToggleSwitch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.quickscopeToggleSwitch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.quickscopeToggleSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.quickscopeToggleSwitch.UncheckedState.InnerColor = System.Drawing.Color.White;
-            this.quickscopeToggleSwitch.UncheckedState.Parent = this.quickscopeToggleSwitch;
-            this.quickscopeToggleSwitch.CheckedChanged += new System.EventHandler(this.quickscopeToggleSwitch_CheckedChanged);
+            this.Transition.SetDecoration(this.holdmouseTrackBar, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.holdmouseTrackBar.HoverState.Parent = this.holdmouseTrackBar;
+            this.holdmouseTrackBar.Location = new System.Drawing.Point(203, 65);
+            this.holdmouseTrackBar.Name = "holdmouseTrackBar";
+            this.holdmouseTrackBar.Size = new System.Drawing.Size(181, 19);
+            this.holdmouseTrackBar.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
+            this.holdmouseTrackBar.TabIndex = 19;
+            this.holdmouseTrackBar.ThumbColor = System.Drawing.Color.DarkSlateBlue;
+            this.holdmouseTrackBar.Value = 0;
+            this.holdmouseTrackBar.ValueChanged += new System.EventHandler(this.holdmouseTrackBar_ValueChanged);
             // 
             // humanizationLabel
             // 
@@ -405,7 +407,7 @@ namespace Sploitgate
             this.Transition.SetDecoration(this.humanizationLabel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.humanizationLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.humanizationLabel.ForeColor = System.Drawing.Color.White;
-            this.humanizationLabel.Location = new System.Drawing.Point(7, 107);
+            this.humanizationLabel.Location = new System.Drawing.Point(5, 154);
             this.humanizationLabel.Name = "humanizationLabel";
             this.humanizationLabel.Size = new System.Drawing.Size(102, 20);
             this.humanizationLabel.TabIndex = 12;
@@ -421,7 +423,7 @@ namespace Sploitgate
             this.humanizeToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.White;
             this.humanizeToggleSwitch.CheckedState.Parent = this.humanizeToggleSwitch;
             this.Transition.SetDecoration(this.humanizeToggleSwitch, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.humanizeToggleSwitch.Location = new System.Drawing.Point(149, 107);
+            this.humanizeToggleSwitch.Location = new System.Drawing.Point(153, 154);
             this.humanizeToggleSwitch.Name = "humanizeToggleSwitch";
             this.humanizeToggleSwitch.ShadowDecoration.Parent = this.humanizeToggleSwitch;
             this.humanizeToggleSwitch.Size = new System.Drawing.Size(35, 20);
@@ -433,13 +435,48 @@ namespace Sploitgate
             this.humanizeToggleSwitch.UncheckedState.Parent = this.humanizeToggleSwitch;
             this.humanizeToggleSwitch.CheckedChanged += new System.EventHandler(this.humanizeToggleSwitch_CheckedChanged);
             // 
+            // quickscopeLabel
+            // 
+            this.quickscopeLabel.AutoSize = true;
+            this.quickscopeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.Transition.SetDecoration(this.quickscopeLabel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.quickscopeLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.quickscopeLabel.ForeColor = System.Drawing.Color.White;
+            this.quickscopeLabel.Location = new System.Drawing.Point(5, 114);
+            this.quickscopeLabel.Name = "quickscopeLabel";
+            this.quickscopeLabel.Size = new System.Drawing.Size(85, 20);
+            this.quickscopeLabel.TabIndex = 18;
+            this.quickscopeLabel.Text = "Quickscope";
+            // 
+            // quickscopeToggleSwitch
+            // 
+            this.quickscopeToggleSwitch.Animated = true;
+            this.quickscopeToggleSwitch.BackColor = System.Drawing.Color.Transparent;
+            this.quickscopeToggleSwitch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.quickscopeToggleSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.quickscopeToggleSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.quickscopeToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.quickscopeToggleSwitch.CheckedState.Parent = this.quickscopeToggleSwitch;
+            this.Transition.SetDecoration(this.quickscopeToggleSwitch, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.quickscopeToggleSwitch.Location = new System.Drawing.Point(153, 114);
+            this.quickscopeToggleSwitch.Name = "quickscopeToggleSwitch";
+            this.quickscopeToggleSwitch.ShadowDecoration.Parent = this.quickscopeToggleSwitch;
+            this.quickscopeToggleSwitch.Size = new System.Drawing.Size(35, 20);
+            this.quickscopeToggleSwitch.TabIndex = 17;
+            this.quickscopeToggleSwitch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.quickscopeToggleSwitch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.quickscopeToggleSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.quickscopeToggleSwitch.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.quickscopeToggleSwitch.UncheckedState.Parent = this.quickscopeToggleSwitch;
+            this.quickscopeToggleSwitch.CheckedChanged += new System.EventHandler(this.quickscopeToggleSwitch_CheckedChanged);
+            // 
             // antirecoilstrengthLabel
             // 
             this.antirecoilstrengthLabel.BackColor = System.Drawing.Color.Transparent;
             this.Transition.SetDecoration(this.antirecoilstrengthLabel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.antirecoilstrengthLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.antirecoilstrengthLabel.ForeColor = System.Drawing.Color.White;
-            this.antirecoilstrengthLabel.Location = new System.Drawing.Point(3, 233);
+            this.antirecoilstrengthLabel.Location = new System.Drawing.Point(204, 132);
             this.antirecoilstrengthLabel.Name = "antirecoilstrengthLabel";
             this.antirecoilstrengthLabel.Size = new System.Drawing.Size(193, 21);
             this.antirecoilstrengthLabel.TabIndex = 16;
@@ -449,7 +486,7 @@ namespace Sploitgate
             // 
             this.Transition.SetDecoration(this.antirecoilstrengthTrackBar, Guna.UI2.AnimatorNS.DecorationType.None);
             this.antirecoilstrengthTrackBar.HoverState.Parent = this.antirecoilstrengthTrackBar;
-            this.antirecoilstrengthTrackBar.Location = new System.Drawing.Point(3, 257);
+            this.antirecoilstrengthTrackBar.Location = new System.Drawing.Point(203, 156);
             this.antirecoilstrengthTrackBar.Name = "antirecoilstrengthTrackBar";
             this.antirecoilstrengthTrackBar.Size = new System.Drawing.Size(181, 19);
             this.antirecoilstrengthTrackBar.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
@@ -458,18 +495,18 @@ namespace Sploitgate
             this.antirecoilstrengthTrackBar.Value = 0;
             this.antirecoilstrengthTrackBar.ValueChanged += new System.EventHandler(this.antirecoilstrengthTrackBar_ValueChanged);
             // 
-            // label1
+            // antirecoilLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.Transition.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(7, 141);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Anti-Recoil";
+            this.antirecoilLabel.AutoSize = true;
+            this.antirecoilLabel.BackColor = System.Drawing.Color.Transparent;
+            this.Transition.SetDecoration(this.antirecoilLabel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.antirecoilLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.antirecoilLabel.ForeColor = System.Drawing.Color.White;
+            this.antirecoilLabel.Location = new System.Drawing.Point(5, 78);
+            this.antirecoilLabel.Name = "antirecoilLabel";
+            this.antirecoilLabel.Size = new System.Drawing.Size(83, 20);
+            this.antirecoilLabel.TabIndex = 10;
+            this.antirecoilLabel.Text = "Anti-Recoil";
             // 
             // antirecoilToggleSwitch
             // 
@@ -481,7 +518,7 @@ namespace Sploitgate
             this.antirecoilToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.White;
             this.antirecoilToggleSwitch.CheckedState.Parent = this.antirecoilToggleSwitch;
             this.Transition.SetDecoration(this.antirecoilToggleSwitch, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.antirecoilToggleSwitch.Location = new System.Drawing.Point(149, 141);
+            this.antirecoilToggleSwitch.Location = new System.Drawing.Point(153, 78);
             this.antirecoilToggleSwitch.Name = "antirecoilToggleSwitch";
             this.antirecoilToggleSwitch.ShadowDecoration.Parent = this.antirecoilToggleSwitch;
             this.antirecoilToggleSwitch.Size = new System.Drawing.Size(35, 20);
@@ -499,7 +536,7 @@ namespace Sploitgate
             this.Transition.SetDecoration(this.delayLabel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.delayLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.delayLabel.ForeColor = System.Drawing.Color.White;
-            this.delayLabel.Location = new System.Drawing.Point(3, 183);
+            this.delayLabel.Location = new System.Drawing.Point(204, 87);
             this.delayLabel.Name = "delayLabel";
             this.delayLabel.Size = new System.Drawing.Size(157, 21);
             this.delayLabel.TabIndex = 6;
@@ -509,7 +546,7 @@ namespace Sploitgate
             // 
             this.Transition.SetDecoration(this.shotdelayTrackBar, Guna.UI2.AnimatorNS.DecorationType.None);
             this.shotdelayTrackBar.HoverState.Parent = this.shotdelayTrackBar;
-            this.shotdelayTrackBar.Location = new System.Drawing.Point(3, 207);
+            this.shotdelayTrackBar.Location = new System.Drawing.Point(203, 110);
             this.shotdelayTrackBar.Maximum = 500;
             this.shotdelayTrackBar.Name = "shotdelayTrackBar";
             this.shotdelayTrackBar.Size = new System.Drawing.Size(181, 19);
@@ -526,7 +563,7 @@ namespace Sploitgate
             this.Transition.SetDecoration(this.shottysnipersLabel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.shottysnipersLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.shottysnipersLabel.ForeColor = System.Drawing.Color.White;
-            this.shottysnipersLabel.Location = new System.Drawing.Point(7, 39);
+            this.shottysnipersLabel.Location = new System.Drawing.Point(5, 39);
             this.shottysnipersLabel.Name = "shottysnipersLabel";
             this.shottysnipersLabel.Size = new System.Drawing.Size(103, 20);
             this.shottysnipersLabel.TabIndex = 8;
@@ -542,7 +579,7 @@ namespace Sploitgate
             this.shottysnipersToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.White;
             this.shottysnipersToggleSwitch.CheckedState.Parent = this.shottysnipersToggleSwitch;
             this.Transition.SetDecoration(this.shottysnipersToggleSwitch, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.shottysnipersToggleSwitch.Location = new System.Drawing.Point(149, 39);
+            this.shottysnipersToggleSwitch.Location = new System.Drawing.Point(153, 39);
             this.shottysnipersToggleSwitch.Name = "shottysnipersToggleSwitch";
             this.shottysnipersToggleSwitch.ShadowDecoration.Parent = this.shottysnipersToggleSwitch;
             this.shottysnipersToggleSwitch.Size = new System.Drawing.Size(35, 20);
@@ -562,22 +599,22 @@ namespace Sploitgate
             // 
             this.Transition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent;
             this.Transition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 1F;
-            this.Transition.DefaultAnimation = animation1;
+            animation15.AnimateOnlyDifferences = true;
+            animation15.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.BlindCoeff")));
+            animation15.LeafCoeff = 0F;
+            animation15.MaxTime = 1F;
+            animation15.MinTime = 0F;
+            animation15.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.MosaicCoeff")));
+            animation15.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation15.MosaicShift")));
+            animation15.MosaicSize = 0;
+            animation15.Padding = new System.Windows.Forms.Padding(0);
+            animation15.RotateCoeff = 0F;
+            animation15.RotateLimit = 0F;
+            animation15.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.ScaleCoeff")));
+            animation15.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.SlideCoeff")));
+            animation15.TimeCoeff = 0F;
+            animation15.TransparencyCoeff = 1F;
+            this.Transition.DefaultAnimation = animation15;
             // 
             // subLabel
             // 
@@ -585,16 +622,12 @@ namespace Sploitgate
             this.Transition.SetDecoration(this.subLabel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.subLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subLabel.ForeColor = System.Drawing.Color.White;
-            this.subLabel.Location = new System.Drawing.Point(4, 393);
+            this.subLabel.Location = new System.Drawing.Point(3, 422);
             this.subLabel.Name = "subLabel";
             this.subLabel.Size = new System.Drawing.Size(100, 21);
             this.subLabel.TabIndex = 5;
             this.subLabel.Text = "Subscription:";
             this.subLabel.Visible = false;
-            // 
-            // humanizationTimer
-            // 
-            this.humanizationTimer.Tick += new System.EventHandler(this.humanizationTimer_Tick);
             // 
             // motdLabel
             // 
@@ -602,35 +635,67 @@ namespace Sploitgate
             this.Transition.SetDecoration(this.motdLabel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.motdLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.motdLabel.ForeColor = System.Drawing.Color.White;
-            this.motdLabel.Location = new System.Drawing.Point(4, 414);
+            this.motdLabel.Location = new System.Drawing.Point(3, 443);
             this.motdLabel.Name = "motdLabel";
             this.motdLabel.Size = new System.Drawing.Size(57, 21);
             this.motdLabel.TabIndex = 6;
             this.motdLabel.Text = "MOTD:";
             this.motdLabel.Visible = false;
             // 
-            // SploitGate
+            // logoPictureBox
+            // 
+            this.Transition.SetDecoration(this.logoPictureBox, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.logoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.Image")));
+            this.logoPictureBox.Location = new System.Drawing.Point(66, 12);
+            this.logoPictureBox.Name = "logoPictureBox";
+            this.logoPictureBox.Size = new System.Drawing.Size(310, 62);
+            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logoPictureBox.TabIndex = 7;
+            this.logoPictureBox.TabStop = false;
+            this.logoPictureBox.Visible = false;
+            // 
+            // humanizationTimer
+            // 
+            this.humanizationTimer.Tick += new System.EventHandler(this.humanizationTimer_Tick);
+            // 
+            // logoDragControl
+            // 
+            this.logoDragControl.TargetControl = this.logoPictureBox;
+            // 
+            // BorderlessForm
+            // 
+            this.BorderlessForm.BorderRadius = 8;
+            this.BorderlessForm.ContainerControl = this;
+            this.BorderlessForm.DragForm = false;
+            this.BorderlessForm.HasFormShadow = false;
+            this.BorderlessForm.ResizeForm = false;
+            // 
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 437);
+            this.ClientSize = new System.Drawing.Size(442, 468);
             this.Controls.Add(this.motdLabel);
             this.Controls.Add(this.subLabel);
             this.Controls.Add(this.miscGroupBox);
             this.Controls.Add(this.triggerbotoptionsGroupBox);
             this.Controls.Add(this.triggerbotGroupBox);
             this.Controls.Add(this.welcomeLabel);
+            this.Controls.Add(this.logoPictureBox);
+            this.Controls.Add(this.loadconfigsComboBox);
+            this.Controls.Add(this.configsaveButton);
             this.Transition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.DisplayHeader = false;
             this.MaximizeBox = false;
-            this.Name = "SploitGate";
+            this.Name = "Main";
+            this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
             this.ShowIcon = false;
             this.Style = MetroFramework.MetroColorStyle.Purple;
-            this.Text = "Sploitgate v2.6";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SploitGate_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
             this.triggerbotGroupBox.ResumeLayout(false);
@@ -639,6 +704,7 @@ namespace Sploitgate
             this.miscGroupBox.PerformLayout();
             this.triggerbotoptionsGroupBox.ResumeLayout(false);
             this.triggerbotoptionsGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -651,7 +717,6 @@ namespace Sploitgate
         private Guna.UI2.WinForms.Guna2GroupBox triggerbotGroupBox;
         private Guna.UI2.WinForms.Guna2GroupBox miscGroupBox;
         private Guna.UI2.WinForms.Guna2GroupBox triggerbotoptionsGroupBox;
-        private System.Windows.Forms.Label lightmodeLabel;
         private System.Windows.Forms.Label delayLabel;
         private Guna.UI2.WinForms.Guna2TrackBar shotdelayTrackBar;
         private System.Windows.Forms.Label shottysnipersLabel;
@@ -660,10 +725,9 @@ namespace Sploitgate
         private Guna.UI2.WinForms.Guna2ToggleSwitch chromamodeToggleSwitch;
         private System.Windows.Forms.Label triggerLabel;
         private Guna.UI2.WinForms.Guna2ToggleSwitch triggerbotToggleSwitch;
-        public Guna.UI2.WinForms.Guna2ToggleSwitch lightmodeToggleSwitch;
         private System.Windows.Forms.Timer ChromamodeTimer;
         private Guna.UI2.WinForms.Guna2Button configsaveButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label antirecoilLabel;
         private Guna.UI2.WinForms.Guna2ToggleSwitch antirecoilToggleSwitch;
         private Guna.UI2.WinForms.Guna2Transition Transition;
         private Guna.UI2.WinForms.Guna2ComboBox loadconfigsComboBox;
@@ -678,6 +742,13 @@ namespace Sploitgate
         private System.Windows.Forms.Label quickscopeLabel;
         private Guna.UI2.WinForms.Guna2ToggleSwitch quickscopeToggleSwitch;
         private System.Windows.Forms.Label motdLabel;
+        private System.Windows.Forms.Label crouchassistLabel;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch crouchassistToggleSwitch;
+        private System.Windows.Forms.PictureBox logoPictureBox;
+        private Guna.UI2.WinForms.Guna2DragControl logoDragControl;
+        private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
+        private System.Windows.Forms.Label holdmouseLabel;
+        private Guna.UI2.WinForms.Guna2TrackBar holdmouseTrackBar;
     }
 }
 

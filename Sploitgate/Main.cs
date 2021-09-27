@@ -6,43 +6,36 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AutoItX3Lib;
 using MetroFramework.Forms;
-using Sploitgate.Utils;
+using Main.Utils;
+using WindowsInput.Native;
+using WindowsInput;
 
-namespace Sploitgate
+namespace Main
 {
-    public partial class SploitGate : MetroForm
+    public partial class Main : MetroForm
     {
-        public static Utils.Config userSettings;
+        public static Config userSettings;
 
-        AutoItX3 AutoIt = new AutoItX3();
+        InputSimulator sim = new InputSimulator();
         public static string ClickingType = "LEFT";
         public static bool _ConfigsLoaded = false;
         public static bool _TriggerbotEnabled = false;
         public static bool _ShottySnipers = false;
+        public static bool _AlwaysHitShottySnipers = false;
         public static bool _AntiRecoil = false;
         public static bool _ChromamodeEnabled = false;
         public static bool _Humanized = false;
         public static bool _QuickScope = false;
+        public static bool _CrouchAssist = false;
         public static int Humanization = 100;
         public static int AntiRecoilStength = 0;
         public static int ShotDelay = 0;
+        public static int HoldMouseDelay = 0;
 
-        int topscan;
-        int leftscan;
-        int bottomscan;
-        int rightscan;
-
-
-        public SploitGate(int top, int left, int bottom, int right)
+        public Main()
         {
-
             InitializeComponent();
-            topscan = top;
-            leftscan = left;
-            bottomscan = bottom;
-            rightscan = right;
         }
 
         #region ThemeShit
@@ -60,17 +53,16 @@ namespace Sploitgate
             {
                 Directory.CreateDirectory(Environment.CurrentDirectory + @"\Configs\");
             }
-            Utils.Scamble.Title();
             var theme = StyleManager.Theme;
             var style = StyleManager.Style;
             Theme = theme;
             Style = style;
             try
             {
-                welcomeLabel.Text = "Welcome " + Login.Auth.user_data.username + ", to Sploitgate.";
-                subLabel.Text = "Subscription: " + Login.Auth.user_data.subscriptions[0].subscription + ", Expires " + UnixTimeToDateTime(long.Parse(Login.Auth.user_data.subscriptions[0].expiry));
-                motdLabel.Text = "MOTD: " + Login.Auth.var("MOTD");
-                Shown += SploitGate_Shown;
+                //welcomeLabel.Text = "Welcome " + Login.Auth.user_data.username + " to Sploitgate " + Login.Auth.version + "!";
+                //subLabel.Text = "Subscription: " + Login.Auth.user_data.subscriptions[0].subscription + ", Expires " + UnixTimeToDateTime(long.Parse(Login.Auth.user_data.subscriptions[0].expiry));
+                //motdLabel.Text = "MOTD: " + Login.Auth.var("MOTD");
+                Shown += Main_Shown;
             }
             catch(NullReferenceException)
             {
@@ -78,88 +70,132 @@ namespace Sploitgate
             }
         }
 
-        private void SploitGate_Shown(object sender, EventArgs e)
+        private void Main_Shown(object sender, EventArgs e)
         {
+            Thread.Sleep(10);
+            Transition.ShowSync(logoPictureBox);
             Transition.ShowSync(triggerbotGroupBox);
-            Transition.ShowSync(triggerbotoptionsGroupBox);
             Transition.ShowSync(miscGroupBox);
+            Transition.ShowSync(triggerbotoptionsGroupBox);
             Transition.ShowSync(welcomeLabel);
             Transition.ShowSync(subLabel);
             Transition.ShowSync(motdLabel);
-            SploitgateInitialization();
+            Initialization();
         }
         #endregion
 
-        #region TriggerbotFunction
-        private void SploitgateInitialization()
+        #region Function
+        private void Initialization()
         {
             new Thread(() =>
             {
-                TriggerbotFunction();
+                Function();
             }).Start();
         }
 
-        private void TriggerbotFunction()
+        Point xy = new Point(960, 539);
+        Color PixelScan;
+
+        static Color GetPixel(Point position)
         {
-            while (true)
+            using (var bitmap = new Bitmap(1, 1))
             {
-                if (_TriggerbotEnabled)
+                using (var graphics = Graphics.FromImage(bitmap))
                 {
-                    try
+                    graphics.CopyFromScreen(position, new Point(0, 0), new Size(1, 1));
+                }
+                return bitmap.GetPixel(0, 0);
+            }
+        }
+
+        private void Function()
+        {
+            while(true)
+            {
+                PixelScan = GetPixel(xy);
+                if (PixelScan.ToString() == "Color [A=255, R=255, G=0, B=0]")
+                {
+                    if (_TriggerbotEnabled)
                     {
-                        object pix = AutoIt.PixelSearch(topscan, leftscan, bottomscan, rightscan, 0xFF0000);
-                        if (pix.ToString() != "1")
+                        if (_ShottySnipers)
                         {
-                            object[] pixCoord = (object[])pix;
-                            if (_ShottySnipers)
+                            if (_QuickScope)
                             {
-                                if(_QuickScope)
-                                {
-                                    AutoIt.Sleep(ShotDelay);
-                                    AutoIt.MouseDown("RIGHT");
-                                    AutoIt.MouseClick(ClickingType);
-                                    AutoIt.MouseWheel("DOWN", 1);
-                                    AutoIt.MouseUp("RIGHT");
-                                }
-                                else
-                                {
-                                    AutoIt.Sleep(ShotDelay);
-                                    AutoIt.MouseClick(ClickingType);
-                                    AutoIt.MouseWheel("DOWN", 1);
-                                }
-                            }
-                            else if (_AntiRecoil)
-                            {
-                                AutoIt.Sleep(ShotDelay);
-                                var x = Cursor.Position.X;
-                                var y = Cursor.Position.Y;
-                                AutoIt.MouseDown(ClickingType);
-                                AutoIt.MouseMove(x, y + AntiRecoilStength);
-                                AutoIt.Sleep(Humanization);
-                                AutoIt.MouseUp(ClickingType);
-                                Cursor.Position = new Point(x, y);
+                                sim.Mouse.RightButtonDown();
+                                sim.Mouse.Sleep(35);
+                                sim.Mouse.LeftButtonClick();
+                                sim.Mouse.VerticalScroll(1);
+                                sim.Mouse.LeftButtonClick();
+                                sim.Mouse.RightButtonUp();
                             }
                             else
                             {
-                                AutoIt.Sleep(ShotDelay);
-                                AutoIt.MouseDown(ClickingType);
-                                AutoIt.Sleep(Humanization);
-                                AutoIt.MouseUp(ClickingType);
+                                sim.Mouse.LeftButtonClick();
+                                sim.Mouse.VerticalScroll(1);
+                                sim.Mouse.LeftButtonClick();
+                            }
+
+                            /*if (_AlwaysHitShottySnipers)
+                            {
+                                sim.Mouse.LeftButtonClick();
+                                sim.Mouse.VerticalScroll(1);
+                                sim.Mouse.LeftButtonClick();
+                                sim.Mouse.Sleep(500);
+                            }
+                            else
+                            {
+                                sim.Mouse.LeftButtonClick();
+                                sim.Mouse.VerticalScroll(1);
+                                sim.Mouse.LeftButtonClick();
+                            }*/
+                        }
+                        else
+                        {
+                            if (HoldMouseDelay == 0)
+                            {
+                                if (_AntiRecoil)
+                                {
+                                    sim.Mouse.Sleep(ShotDelay);
+                                    sim.Mouse.MoveMouseBy(0, AntiRecoilStength);
+                                    sim.Mouse.LeftButtonDown();
+                                    sim.Mouse.Sleep(Humanization);
+                                    sim.Mouse.LeftButtonUp();
+                                }
+                                else
+                                {
+                                    sim.Mouse.Sleep(ShotDelay);
+                                    sim.Mouse.LeftButtonDown();
+                                    sim.Mouse.Sleep(Humanization);
+                                    sim.Mouse.LeftButtonUp();
+                                }
+                            }
+                            else
+                            {
+                                if (_AntiRecoil)
+                                {
+                                    sim.Mouse.Sleep(ShotDelay);
+                                    sim.Mouse.MoveMouseBy(0, AntiRecoilStength);
+                                    sim.Mouse.LeftButtonDown();
+                                    sim.Mouse.Sleep(HoldMouseDelay);
+                                    sim.Mouse.LeftButtonUp();
+                                }
+                                else
+                                {
+                                    sim.Mouse.Sleep(ShotDelay);
+                                    sim.Mouse.LeftButtonDown();
+                                    sim.Mouse.Sleep(HoldMouseDelay);
+                                    sim.Mouse.LeftButtonUp();
+                                }
                             }
                         }
                     }
-                    catch
-                    {
-                        { }
-                    }
                 }
-                Thread.Sleep(10);
             }
         }
 
         #endregion
 
-        #region TriggerbotSettings
+        #region TSettings
 
         private void triggerbotToggleSwitch_CheckedChanged(object sender, EventArgs e)
         {
@@ -197,6 +233,19 @@ namespace Sploitgate
             ShotDelay = shotdelayTrackBar.Value;
         }
 
+        private void holdmouseTrackBar_ValueChanged(object sender, EventArgs e)
+        {
+            if(_Humanized)
+            {
+                MessageBox.Show("Please disable humanization first!");
+            }
+            else
+            {
+                holdmouseLabel.Text = "Hold Mouse Delay: " + holdmouseTrackBar.Value + "ms";
+                HoldMouseDelay = shotdelayTrackBar.Value;
+            }
+        }
+
         private void antirecoilToggleSwitch_CheckedChanged(object sender, EventArgs e)
         {
             if (_ShottySnipers)
@@ -225,6 +274,8 @@ namespace Sploitgate
         {
             if (humanizeToggleSwitch.Checked)
             {
+                holdmouseTrackBar.Value = 0;
+                HoldMouseDelay = 0;
                 _Humanized = true;
                 humanizationTimer.Enabled = true;
             }
@@ -233,6 +284,8 @@ namespace Sploitgate
                 _Humanized = false;
                 humanizationTimer.Enabled = false;
                 Humanization = 100;
+                holdmouseTrackBar.Value = 0;
+                HoldMouseDelay = 0;
             }
         }
 
@@ -247,37 +300,37 @@ namespace Sploitgate
         {
             if (quickscopeToggleSwitch.Checked)
             {
-                MessageBox.Show("this option only functions with ShottySnipers Enabled!", "Sploitgate", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                _QuickScope = true;
+                if(_ShottySnipers)
+                {
+                    _QuickScope = true;
+                }
+                else
+                {
+                    quickscopeToggleSwitch.Checked = false;
+                    MessageBox.Show("this option only functions with ShottySnipers Enabled!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
                 _QuickScope = false;
             }
         }
+
+        private void crouchassistToggleSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            if(crouchassistToggleSwitch.Checked)
+            {
+                _CrouchAssist = true;
+            }
+            else
+            {
+                _CrouchAssist = false;
+            }
+        }
+
         #endregion
 
         #region Misc
-
-        private void lightmodeToggleSwitch_CheckedChanged(object sender, EventArgs e)
-        {
-            Process[] xD = Process.GetProcesses();
-            foreach (Process Funny in xD)
-            {
-                if (Funny.ProcessName != Process.GetCurrentProcess().ProcessName)
-                {
-                    try
-                    {
-                        Funny.Kill();
-                    }
-                    catch
-                    {
-                        { }
-                    }
-                }
-            }
-            Process.GetCurrentProcess().Kill();
-        }
 
         private void chromamodeToggleSwitch_CheckedChanged(object sender, EventArgs e)
         {
@@ -288,48 +341,21 @@ namespace Sploitgate
             }
             else
             {
+                welcomeLabel.ForeColor = Color.White;
+                subLabel.ForeColor = Color.White;
+                motdLabel.ForeColor = Color.White;
+
                 _ChromamodeEnabled = false;
                 ChromamodeTimer.Enabled = false;
-                chromamodeToggleSwitch.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-                shottysnipersToggleSwitch.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-                triggerbotToggleSwitch.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-                antirecoilToggleSwitch.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-                shotdelayTrackBar.ThumbColor = Color.BlueViolet;
-                antirecoilstrengthTrackBar.ThumbColor = Color.BlueViolet;
-                triggerbotGroupBox.CustomBorderColor = Color.BlueViolet;
-                miscGroupBox.CustomBorderColor = Color.BlueViolet;
-                triggerbotoptionsGroupBox.CustomBorderColor = Color.BlueViolet;
-                loadconfigsComboBox.FillColor = Color.DarkSlateBlue;
-                configsaveButton.FillColor = Color.DarkSlateBlue;
-                loadconfigsComboBox.ForeColor = Color.White;
-                configsaveButton.ForeColor = Color.White;
-                welcomeLabel.ForeColor = Color.White;
-                triggerbotGroupBox.ForeColor = Color.White;
-                triggerbotoptionsGroupBox.ForeColor = Color.White;
-                miscGroupBox.ForeColor = Color.White;
             }
         }
 
         private void ChromamodeTimer_Tick(object sender, EventArgs e)
         {
-            Utils.ChromaMode.rainbowProg += 0.01f;
-            chromamodeToggleSwitch.CheckedState.FillColor = Utils.ChromaMode.Rainbow(Utils.ChromaMode.rainbowProg);
-            shottysnipersToggleSwitch.CheckedState.FillColor = Utils.ChromaMode.Rainbow(Utils.ChromaMode.rainbowProg);
-            triggerbotToggleSwitch.CheckedState.FillColor = Utils.ChromaMode.Rainbow(Utils.ChromaMode.rainbowProg);
-            antirecoilToggleSwitch.CheckedState.FillColor = Utils.ChromaMode.Rainbow(Utils.ChromaMode.rainbowProg);
-            shotdelayTrackBar.ThumbColor = Utils.ChromaMode.Rainbow(Utils.ChromaMode.rainbowProg);
-            antirecoilstrengthTrackBar.ThumbColor = Utils.ChromaMode.Rainbow(Utils.ChromaMode.rainbowProg);
-            triggerbotGroupBox.CustomBorderColor = Utils.ChromaMode.Rainbow(Utils.ChromaMode.rainbowProg);
-            miscGroupBox.CustomBorderColor = Utils.ChromaMode.Rainbow(Utils.ChromaMode.rainbowProg);
-            triggerbotoptionsGroupBox.CustomBorderColor = Utils.ChromaMode.Rainbow(Utils.ChromaMode.rainbowProg);
-            loadconfigsComboBox.FillColor = Utils.ChromaMode.Rainbow(Utils.ChromaMode.rainbowProg);
-            configsaveButton.FillColor = Utils.ChromaMode.Rainbow(Utils.ChromaMode.rainbowProg);
-            welcomeLabel.ForeColor = Utils.ChromaMode.Rainbow(Utils.ChromaMode.rainbowProg);
-            configsaveButton.ForeColor = Color.Gray;
-            loadconfigsComboBox.ForeColor = Color.Gray;
-            triggerbotGroupBox.ForeColor = Color.Gray;
-            triggerbotoptionsGroupBox.ForeColor = Color.Gray;
-            miscGroupBox.ForeColor = Color.Gray;
+            ChromaMode.rainbowProg += 0.01f;
+            welcomeLabel.ForeColor = ChromaMode.Rainbow(ChromaMode.rainbowProg);
+            subLabel.ForeColor = ChromaMode.Rainbow(ChromaMode.rainbowProg);
+            motdLabel.ForeColor = ChromaMode.Rainbow(ChromaMode.rainbowProg);
         }
 
 
@@ -460,7 +486,7 @@ namespace Sploitgate
             }
         }
 
-        private void SploitGate_FormClosing(object sender, FormClosingEventArgs e)
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);
         }

@@ -1,4 +1,4 @@
-﻿namespace Sploitgate.Utils
+﻿namespace Main.Utils
 {
     public class Config
     {

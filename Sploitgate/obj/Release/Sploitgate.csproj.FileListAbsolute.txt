@@ -1,18 +1,36 @@
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Release\Sploitgate.exe.config
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Release\Sploitgate.exe
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Release\Sploitgate.pdb
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Release\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.csproj.AssemblyReference.cache
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Interop.AutoItX3Lib.dll
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.csproj.ResolveComReference.cache
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.SploitGate.resources
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.Properties.Resources.resources
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.csproj.GenerateResource.cache
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.csproj.CoreCompileInputs.cache
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.csproj.Fody.CopyLocal.cache
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.csproj.CopyComplete
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.exe
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.pdb
 C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Release\Newtonsoft.Json.xml
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.Utils.Loading.resources
-C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.Utils.Login.resources
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Release\WindowsInput.xml
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Interop.AutoItX3Lib.dll
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.csproj.ResolveComReference.cache
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Release\RandomStuff.exe.config
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Release\RandomStuff.exe
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\bin\Release\RandomStuff.pdb
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\RandomStuff.exe
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\RandomStuff.pdb
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Main.Main.resources
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Main.Utils.Loading.resources
+C:\Users\Verity\source\repos\Sploitgate\Sploitgate\obj\Release\Main.Utils.Login.resources
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\bin\Release\Sploitgate.exe.config
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\bin\Release\Sploitgate.exe
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\bin\Release\Sploitgate.pdb
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\bin\Release\Newtonsoft.Json.xml
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\bin\Release\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\bin\Release\WindowsInput.xml
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.csproj.AssemblyReference.cache
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.csproj.SuggestedBindingRedirects.cache
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Release\Main.Main.resources
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.Properties.Resources.resources
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Release\Main.Utils.Loading.resources
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Release\Main.Utils.Login.resources
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.csproj.GenerateResource.cache
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.csproj.CoreCompileInputs.cache
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.csproj.Fody.CopyLocal.cache
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.exe
+C:\Users\Verity\Desktop\Old\Old repos\Sploitgate\Sploitgate\obj\Release\Sploitgate.pdb
